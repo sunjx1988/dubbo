@@ -1,7 +1,7 @@
 package dubbo.consumer;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import dubbo.provider.Talk;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Person {
 
-    @Autowired
+    @Reference
     private Talk talk;
 
     public void talk(String userName){

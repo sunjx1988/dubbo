@@ -1,6 +1,8 @@
 package dubbo;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import dubbo.consumer.Person;
+import dubbo.provider.Talk;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,4 +23,5 @@ public class ConsumerTest {
     public void Run(){
         person.talk("dubbo");
     }
+
 }

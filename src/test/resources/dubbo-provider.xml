@@ -18,10 +18,7 @@
 
     <dubbo:protocol name="dubbo" port="20880"/>
 
-    <!-- 注册服务 -->
-    <dubbo:service interface="dubbo.provider.Talk" ref="talkService"/>
-
-    <!-- 实现类 -->
-    <bean id="talkService" class="dubbo.provider.impl.TalkImpl"/>
+    <!-- 扫描基于注解的包 -->
+    <dubbo:annotation package="dubbo.provider" />
 
 </beans>
