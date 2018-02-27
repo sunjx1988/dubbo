@@ -29,4 +29,8 @@
 
     <!-- 扫描基于注解的包 -->
     <dubbo:annotation package="dubbo.consumer" />
+
+    <!-- 服务消费者默认配置 -->
+    <dubbo:consumer version="1.0.0"/>
+
 </beans>

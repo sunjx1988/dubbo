@@ -13,10 +13,14 @@
     <dubbo:registry address="multicast://224.5.6.7:1234"/>
     -->
 
-    <!-- zookeeper版注册中心 -->
+    <!-- 服务注册中心 zookeeper -->
     <dubbo:registry protocol="zookeeper" address="jx.sun:2181,slave2.sun:2181,slave3.sun:2181" />
 
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <!-- 服务协议 -->
+    <dubbo:protocol name="dubbo" port="20880" />
+
+    <!-- 服务提供者的默认配置 -->
+    <dubbo:provider timeout="200" retries="3" loadbalance="random" threads="200" actives="100" token="true" version="1.0.0" />
 
     <!-- 扫描基于注解的包 -->
     <dubbo:annotation package="dubbo.provider" />
